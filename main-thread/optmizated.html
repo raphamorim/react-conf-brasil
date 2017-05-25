@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Thread - Optmizated</title>
+</head>
+<body>
+<div class="animation">0</div>
+<img src="http://media.giphy.com/media/jkSvCVEXWlOla/giphy.gif" alt="">
+<script>
+  setTimeout(() => {
+    const animation1 = document.querySelector('.animation')
+    let i = 0
+    function stepByStep() {
+      animation1.innerHTML = (i += 1)
+      if (i < 30000) {
+        requestAnimationFrame(stepByStep)
+      }
+    }
+
+    stepByStep()
+  }, 3000)
+</script>
+</body>
+</html>

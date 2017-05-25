@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Thread</title>
+</head>
+<body>
+<div class="animation">0</div>
+<img src="http://media.giphy.com/media/jkSvCVEXWlOla/giphy.gif" alt="">
+<script>
+  setTimeout(() => {
+    const animation1 = document.querySelector('.animation')
+    for (var i = 0; i < 30000; i++) {
+      animation1.innerHTML = i
+    }
+  }, 3000)
+</script>
+</body>
+</html>
